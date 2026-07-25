@@ -1,0 +1,133 @@
+/* =========================================================
+   YoungStars Hope Foundation-Africa — news.css
+   Dedicated stylesheet for news.html ONLY.
+
+   Assumes assets/css/main.min.css is already loaded on the page
+   (design tokens, .site-header, .site-footer, .page-banner,
+   .hero-scrim, .banner-constellation, .cta-section, .contact-card,
+   .section-title, .accent, .fade-up, .visually-hidden, .form-control).
+   Everything below is specific to news.html: the banner image,
+   search/filter toolbar, featured post, card grid, and the
+   read-more expand mechanic (same pattern as donate.html's
+   story cards, reimplemented here so this file stays standalone).
+   ========================================================= */
+
+.banner-bg-news {
+    background-image: url('https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?auto=format&fit=crop&w=1920&q=80');
+}
+
+/* ===== Search + filter toolbar ===== */
+.news-toolbar { padding: 3.5rem 0 0; background: var(--cream); }
+
+.news-search { max-width: 520px; margin: 0 auto 1.6rem; }
+.news-search .input-group-text { background: #fff; border-color: rgba(34, 29, 24, 0.15); color: var(--text-muted); }
+.news-search .form-control { border-left: none; }
+.news-search .input-group:focus-within .input-group-text,
+.news-search .input-group:focus-within .form-control { border-color: var(--terracotta); }
+
+.news-filters {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 1rem;
+}
+.news-filter-btn {
+    font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.04em; text-transform: uppercase;
+    padding: 0.5rem 1.05rem; border-radius: 999px; border: 1px solid rgba(34, 29, 24, 0.15);
+    background: #fff; color: var(--text-muted); cursor: pointer; transition: all 0.2s ease;
+}
+.news-filter-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+.news-filter-btn.is-active { background: var(--terracotta); border-color: var(--terracotta); color: #fff; }
+
+/* ===== Featured post ===== */
+.news-featured-section { padding: 3rem 0 1rem; background: var(--cream); }
+
+.news-featured-card {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
+    background: #fff; border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-lift); border: 1px solid rgba(185, 80, 42, 0.08);
+    max-width: 1040px; margin: 0 auto;
+}
+.news-featured-media { min-height: 320px; }
+.news-featured-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.news-featured-body { padding: 2.6rem 2.8rem; display: flex; flex-direction: column; }
+.news-featured-body h3 { font-family: var(--font-display); font-size: 1.55rem; font-weight: 700; margin: 0.6rem 0 0.9rem; }
+
+/* ===== Shared tag / date styles (featured + grid cards) ===== */
+.news-tag {
+    align-self: flex-start; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--terracotta); background: rgba(185, 80, 42, 0.08);
+    border-radius: 999px; padding: 0.28rem 0.75rem;
+}
+.news-date {
+    display: block; font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-muted);
+    margin-top: 0.6rem;
+}
+.news-teaser { color: var(--text-muted); font-size: 0.96rem; line-height: 1.7; margin-bottom: 0; }
+
+/* ===== Read-more expand mechanic ===== */
+.news-full {
+    color: var(--text-muted); font-size: 0.94rem; line-height: 1.75;
+    max-height: 0; overflow: hidden; opacity: 0; margin-top: 0;
+    transition: max-height 0.45s ease, opacity 0.35s ease, margin 0.45s ease;
+}
+.news-full p:last-child { margin-bottom: 0; }
+.news-full a { color: var(--terracotta); font-weight: 600; }
+
+.news-card.is-open .news-full,
+.news-featured-card.is-open .news-full {
+    max-height: 700px; opacity: 1; margin-top: 1rem;
+}
+.news-card.is-open .news-teaser,
+.news-featured-card.is-open .news-teaser { display: none; }
+
+.news-toggle {
+    align-self: flex-start; margin-top: 1.2rem; background: none; border: none; padding: 0;
+    color: var(--terracotta); font-weight: 600; font-size: 0.88rem;
+    display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer;
+}
+.news-toggle:hover { color: var(--terracotta-deep); }
+.news-toggle i { transition: transform 0.3s ease; font-size: 0.75rem; }
+.news-card.is-open .news-toggle i,
+.news-featured-card.is-open .news-toggle i { transform: rotate(180deg); }
+
+/* ===== News grid ===== */
+.news-grid-section { padding: 4rem 0 6.5rem; background: var(--cream); }
+
+.news-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+    max-width: 1180px; margin: 0 auto;
+}
+
+.news-card {
+    background: #fff; border-radius: var(--radius-lg); overflow: hidden;
+    box-shadow: var(--shadow-soft); border: 1px solid rgba(185, 80, 42, 0.08);
+    display: flex; flex-direction: column;
+}
+.news-card-media { height: 190px; }
+.news-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.news-card-body { padding: 1.6rem 1.6rem 1.8rem; display: flex; flex-direction: column; flex: 1; }
+.news-card-body h3 { font-family: var(--font-display); font-size: 1.08rem; font-weight: 700; margin: 0.6rem 0 0.7rem; }
+
+.news-card.d-none { display: none; }
+
+.news-empty-state {
+    max-width: 700px; margin: 2rem auto 0; text-align: center; color: var(--text-muted); font-size: 0.96rem;
+}
+.news-empty-state a { color: var(--terracotta); font-weight: 600; }
+
+.news-load-more-wrap { text-align: center; margin-top: 2.6rem; }
+.news-load-more-wrap.d-none { display: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 991.98px) {
+    .news-featured-card { grid-template-columns: 1fr; }
+    .news-featured-media { min-height: 240px; }
+    .news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 767.98px) {
+    .news-toolbar { padding: 2.5rem 0 0; }
+    .news-filters { gap: 0.45rem; }
+    .news-featured-section { padding: 2rem 0 0.5rem; }
+    .news-featured-body { padding: 1.8rem 1.6rem; }
+    .news-grid-section { padding: 3rem 0 4.5rem; }
+    .news-grid { grid-template-columns: 1fr; }
+}

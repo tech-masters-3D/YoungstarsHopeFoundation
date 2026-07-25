@@ -59,7 +59,7 @@
                     <ul class="nav-links">
                         <li><a class="nav-link" href="index.html">Home</a></li>
                         <li><a class="nav-link" href="about.html">About</a></li>
-                        <li><a class="nav-link" href="team.html">Team</a></li>
+                         <li><a class="nav-link" href="team.html">Team</a></li>
                         <li><a class="nav-link" href="programs.html">Programs</a></li>
                         <li><a class="nav-link" href="get-involved.html">Get Involved</a></li>
                         <li><a class="nav-link" href="events.html">Events</a></li>
@@ -429,83 +429,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- ===== DONATION MODAL ===== -->
-    <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content donation-modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <h5 class="modal-title" id="donationModalLabel">
-                        <i class="fas fa-heart" aria-hidden="true"></i> Support Our Mission
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close donation form"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="modal-intro">Your donation helps us empower youth across Africa. Thank you for your generosity.</p>
-
-                    <form id="donationForm" novalidate autocomplete="on">
-                        <div class="mb-3">
-                            <label class="form-label">Select Amount</label>
-                            <div class="amount-group">
-                                <button type="button" class="amount-btn" data-amount="500">KSh 500</button>
-                                <button type="button" class="amount-btn" data-amount="1000">KSh 1,000</button>
-                                <button type="button" class="amount-btn" data-amount="2500">KSh 2,500</button>
-                                <button type="button" class="amount-btn" data-amount="5000">KSh 5,000</button>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="customAmount" class="form-label">Or enter custom amount</label>
-                            <div class="input-group">
-                                <span class="input-group-text">KSh</span>
-                                <input type="number" id="customAmount" class="form-control" placeholder="e.g. 750" min="1" max="1000000" step="1" inputmode="numeric" />
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="donorPhone" class="form-label">Phone Number <span class="required">*</span></label>
-                            <input type="tel" id="donorPhone" class="form-control" placeholder="0712345678 or 254712345678"
-                                   required aria-describedby="phoneHelp" autocomplete="tel" inputmode="tel"
-                                   maxlength="13" pattern="^(0(7|1)[0-9]{8}|254(7|1)[0-9]{8})$" />
-                            <div id="phoneHelp" class="form-text">Enter the M-Pesa registered phone number.</div>
-                            <div class="invalid-feedback">Please enter a valid phone number (07XX or 2547XX).</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="donorName" class="form-label">Your Name (optional)</label>
-                            <input type="text" id="donorName" class="form-control" placeholder="e.g. Jane Muthoni" autocomplete="name" maxlength="80" />
-                        </div>
-
-                        <div class="mb-3">
-                            <div class="form-check">
-                                <input type="checkbox" id="donorTermsConsent" name="terms_consent" class="form-check-input" required value="yes" />
-                                <label for="donorTermsConsent" class="form-check-label">
-                                    I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a> <span class="required">*</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="honeypot" aria-hidden="true">
-                            <label for="honeypot">Leave this field empty</label>
-                            <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off" />
-                        </div>
-
-                        <button type="submit" class="btn btn-primary-warm w-100" id="donateSubmitBtn">
-                            <i class="fas fa-arrow-right" aria-hidden="true"></i> Donate Now
-                        </button>
-
-                        <div id="donationStatus" class="donation-status" role="status" aria-live="polite"></div>
-
-                        <hr />
-                        <p class="modal-fallback">
-                            <i class="fas fa-info-circle" aria-hidden="true"></i>
-                            Airtel / Telkom users: Pay via Paybill <strong>123456</strong> Account <strong>YOUNGSTARS</strong>
-                        </p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- ===== BACK TO TOP ===== -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
