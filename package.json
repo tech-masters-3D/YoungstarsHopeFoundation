@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  },
+  "name": "youngstarshopefoundation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://justusn-done@github.com/justusn-done/YoungstarsHopeFoundation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/justusn-done/YoungstarsHopeFoundation/issues"
+  },
+  "homepage": "https://github.com/justusn-done/YoungstarsHopeFoundation#readme"
+}
