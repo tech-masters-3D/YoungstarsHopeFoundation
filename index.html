@@ -87,27 +87,52 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="nav-links">
-                        <li><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
-                        <li><a class="nav-link" href="about.html">About</a></li>
-                        <li><a class="nav-link" href="team.html">Team</a></li>
-                        <li><a class="nav-link" href="programs.html">Programs</a></li>
-                        <li><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-                        <li><a class="nav-link" href="events.html">Events</a></li>
-                        <li><a class="nav-link" href="news.html">News</a></li>
-                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li><a class="nav-link" href="faq.html">FAQ</a></li>
-                        <li class="nav-cta">
-                            <a href="donate.html" class="btn-donate" aria-label="Go to donation page">
-                                <i class="fas fa-heart" aria-hidden="true"></i> Donate
-                            </a>
+                    <ul class="nav-links accordion-menu" id="accordionMenu">
+
+                        <li class="accordion-item has-active">
+                            <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="panel-org">
+                                Organization <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <ul class="accordion-panel" id="panel-org">
+                                <li><a class="nav-link active" href="index.html" aria-current="page">Home</a></li>
+                                <li><a class="nav-link" href="about.html">About</a></li>
+                                <li><a class="nav-link" href="team.html">Team</a></li>
+                            </ul>
                         </li>
+
+                        <li class="accordion-item">
+                            <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="panel-involved">
+                                Get Involved <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <ul class="accordion-panel" id="panel-involved">
+                                <li><a class="nav-link" href="programs.html">Programs</a></li>
+                                <li><a class="nav-link" href="get-involved.html">Volunteer</a></li>
+                                <li><a class="nav-link" href="events.html">Events</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="accordion-item">
+                            <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="panel-updates">
+                                Updates <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </button>
+                            <ul class="accordion-panel" id="panel-updates">
+                                <li><a class="nav-link" href="news.html">News</a></li>
+                                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li><a class="nav-link" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- Floating Donate button — fixed, stays visible while scrolling -->
+    <a href="donate.html" class="btn-donate-float" aria-label="Go to donation page">
+        <i class="fas fa-heart" aria-hidden="true"></i> Donate
+    </a>
 
     <!-- ===== MAIN CONTENT ===== -->
     <main id="main-content">
@@ -395,6 +420,7 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 
+    <script src="assets/js/nav-accordion.js" defer></script>
     <script src="assets/js/main.min.js" defer></script>
 </body>
 </html>

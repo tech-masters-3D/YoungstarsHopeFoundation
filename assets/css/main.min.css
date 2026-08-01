@@ -183,6 +183,64 @@ img { max-width: 100%; display: block; }
 }
 .btn-donate:hover { background: var(--terracotta-deep); transform: translateY(-2px); }
 
+/* ===== Accordion Navigation — 3 grouped buttons ===== */
+:root {
+    --gap-major: 2.4rem; /* breathing room between the three accordion buttons */
+}
+
+.accordion-menu { gap: var(--gap-major); }
+.accordion-item { position: relative; list-style: none; }
+
+.accordion-toggle {
+    display: flex; align-items: center; gap: 0.45rem;
+    background: none; border: none; cursor: pointer;
+    font-family: var(--font-body); font-size: 0.92rem; font-weight: 600;
+    color: var(--on-dark-muted); padding: 0.4rem 0.1rem;
+    transition: color 0.25s ease;
+}
+.site-header.is-scrolled .accordion-toggle { color: var(--text-muted); }
+
+.accordion-toggle i { font-size: 0.65rem; color: var(--gold); transition: transform 0.3s ease; }
+.accordion-toggle:hover,
+.accordion-item.open .accordion-toggle,
+.accordion-item.has-active .accordion-toggle { color: var(--gold); }
+.site-header.is-scrolled .accordion-toggle:hover,
+.site-header.is-scrolled .accordion-item.open .accordion-toggle,
+.site-header.is-scrolled .accordion-item.has-active .accordion-toggle { color: var(--terracotta); }
+.accordion-item.open .accordion-toggle i { transform: rotate(180deg); }
+
+.accordion-panel {
+    position: absolute; top: calc(100% + 14px); left: 50%; transform: translate(-50%, -8px);
+    min-width: 190px; list-style: none; margin: 0; padding: 0.5rem;
+    background: var(--cream); border-radius: var(--radius-md); box-shadow: var(--shadow-lift);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+.accordion-item.open .accordion-panel { opacity: 1; visibility: visible; transform: translate(-50%, 0); pointer-events: auto; }
+
+.accordion-panel .nav-link {
+    display: block; padding: 0.55rem 0.8rem; border-radius: 8px;
+    color: var(--text); font-size: 0.9rem; font-weight: 600;
+}
+.accordion-panel .nav-link:hover { background: var(--cream-deep); color: var(--terracotta); }
+.accordion-panel .nav-link.active { background: rgba(185, 80, 42, 0.1); color: var(--terracotta); }
+
+/* ===== Floating Donate button — detached, always visible ===== */
+.btn-donate-float {
+    position: fixed; bottom: 5.8rem; right: 1.8rem; z-index: 950;
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    background: var(--terracotta); color: var(--cream); border: none;
+    font-family: var(--font-body); font-weight: 700; font-size: 0.9rem;
+    padding: 0.85rem 1.7rem; border-radius: 999px;
+    box-shadow: 0 14px 30px rgba(185, 80, 42, 0.38);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-donate-float:hover {
+    background: var(--terracotta-deep); color: var(--cream);
+    transform: translateY(-3px); box-shadow: 0 18px 36px rgba(185, 80, 42, 0.44);
+}
+.btn-donate-float i { font-size: 0.85rem; }
+
 /* ===== Hero ===== */
 .hero {
     position: relative; min-height: 100vh; display: flex; align-items: center;
@@ -426,6 +484,25 @@ img { max-width: 100%; display: block; }
     .btn-donate { width: 100%; justify-content: center; }
     .hero-constellation { width: 70vw; opacity: 0.5; }
     .stat-cluster { grid-template-columns: 1fr 1fr; }
+
+    /* Accordion menu stacks vertically inside the mobile drawer */
+    .accordion-menu { flex-direction: column; align-items: stretch; gap: 0; width: 100%; }
+    .accordion-item { border-bottom: 1px solid rgba(34, 29, 24, 0.08); }
+    .accordion-item:last-child { border-bottom: none; }
+    .accordion-toggle { width: 100%; justify-content: space-between; padding: 0.9rem 0.1rem; color: var(--text); }
+    .accordion-item.has-active .accordion-toggle { color: var(--terracotta); }
+
+    .accordion-panel {
+        position: static; transform: none; max-height: 0; overflow: hidden;
+        opacity: 1; visibility: visible; pointer-events: auto;
+        background: transparent; box-shadow: none; padding: 0 0 0 0.6rem;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .accordion-item.open .accordion-panel { max-height: 260px; padding: 0.2rem 0 0.7rem 0.6rem; }
+    .accordion-panel .nav-link { color: var(--text); }
+
+    /* Floating Donate button tucks in closer on small screens */
+    .btn-donate-float { bottom: 1.4rem; right: 1.4rem; padding: 0.7rem 1.3rem; font-size: 0.85rem; }
 }
 
 @media (max-width: 767.98px) {
