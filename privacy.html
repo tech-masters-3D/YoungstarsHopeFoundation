@@ -27,7 +27,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/css/main.min.css" />
 </head>
@@ -36,23 +36,21 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- ===== HEADER ===== -->
-    <header class="header fixed-top" id="header" role="banner" aria-label="Site header">
-        <nav class="navbar navbar-expand-lg py-2" aria-label="Main navigation">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="YoungStars Hope Foundation-Africa home">
-                    <img src="assets/img/logo.png" alt="YoungStars Hope Foundation-Africa logo" height="50" width="50" class="me-2" />
-                     <span class="brand-text">
+    <header class="site-header" id="header" role="banner" aria-label="Site header">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container nav-inner">
+                <a class="brand" href="index.html" aria-label="YoungStars Hope Foundation-Africa home">
+                    <img src="assets/img/logo.png" alt="" height="44" width="44" class="brand-mark" />
+                    <span class="brand-text">
                         <span class="brand-name">YoungStars</span>
                         <span class="brand-sub me-4">Hope Foundation &mdash; Africa</span>
                     </span>
                 </a>
 
-                <!-- Mobile toggle -->
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars" style="color: var(--charcoal); font-size: 1.5rem;" aria-hidden="true"></i>
-            </button>
+                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
 
                  <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="nav-links accordion-menu" id="accordionMenu">
@@ -424,6 +422,8 @@
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
 
+    <!-- Controls the accordion nav buttons (Organization / Get Involved / Updates) -->
+    <script src="assets/js/nav-accordion.js" defer></script>
     <script src="assets/js/main.min.js" defer></script>
 </body>
 </html>
