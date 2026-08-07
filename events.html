@@ -45,6 +45,7 @@
     <header class="site-header" id="header" role="banner" aria-label="Site header">
         <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
             <div class="container nav-inner">
+                <!-- Logo -->
                 <a class="brand" href="index.html" aria-label="YoungStars Hope Foundation-Africa home">
                     <img src="assets/img/logo.png" alt="" height="44" width="44" class="brand-mark" />
                     <span class="brand-text">
@@ -52,53 +53,28 @@
                         <span class="brand-sub me-4">Hope Foundation &mdash; Africa</span>
                     </span>
                 </a>
+                <!-- Mobile toggle -->
+<button id="navbarTogglerBtn" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+    <i id="navbarTogglerIcon" class="fas fa-bars" style="color: var(--charcoal); font-size: 1.5rem;" aria-hidden="true"></i>
+</button>
 
-                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
-                    <span></span><span></span><span></span>
-                </button>
-
-                 <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="nav-links accordion-menu" id="accordionMenu">
-
-                        <li class="accordion-item has-active">
-                            <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="panel-org">
-                                Organization <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                            </button>
-                            <ul class="accordion-panel" id="panel-org">
-                                <li><a class="nav-link" href="index.html">Home</a></li>
-                                <li><a class="nav-link" href="about.html">About</a></li>
-                                <li><a class="nav-link" href="team.html">Team</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="accordion-item">
-                            <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="panel-involved">
-                                Get Involved <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                            </button>
-                            <ul class="accordion-panel" id="panel-involved">
-                                <li><a class="nav-link" href="programs.html">Programs</a></li>
-                                <li><a class="nav-link" href="get-involved.html">Volunteer</a></li>
-                                <li><a class="nav-link active" href="events.html" aria-current="page">Events</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="accordion-item">
-                            <button class="accordion-toggle" type="button" aria-expanded="false" aria-controls="panel-updates">
-                                Updates <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                            </button>
-                            <ul class="accordion-panel" id="panel-updates">
-                                <li><a class="nav-link" href="news.html">News</a></li>
-                                <li><a class="nav-link" href="gallery.html">Gallery</a></li>
-                                <li><a class="nav-link" href="contact.html">Contact</a></li>
-                                <li><a class="nav-link" href="faq.html">FAQ</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                         <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link"  href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="get-involved.html">Volunteer</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+</div>
+</div>
+</nav>
     </header>
 
     <!-- Floating Donate button — fixed, stays visible while scrolling -->

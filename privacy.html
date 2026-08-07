@@ -36,9 +36,10 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- ===== HEADER ===== -->
-    <header class="site-header" id="header" role="banner" aria-label="Site header">
+   <header class="site-header" id="header" role="banner" aria-label="Site header">
         <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
             <div class="container nav-inner">
+                <!-- Logo -->
                 <a class="brand" href="index.html" aria-label="YoungStars Hope Foundation-Africa home">
                     <img src="assets/img/logo.png" alt="" height="44" width="44" class="brand-mark" />
                     <span class="brand-text">
@@ -46,13 +47,13 @@
                         <span class="brand-sub me-4">Hope Foundation &mdash; Africa</span>
                     </span>
                 </a>
+                <!-- Mobile toggle -->
+<button id="navbarTogglerBtn" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
+    <i id="navbarTogglerIcon" class="fas fa-bars" style="color: var(--charcoal); font-size: 1.5rem;" aria-hidden="true"></i>
+</button>
 
-                <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation menu">
-                    <span></span><span></span><span></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="mainNav">
+                         <div class="collapse navbar-collapse" id="mainNav">
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link"  href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -66,8 +67,8 @@
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
 </div>
-
-        </nav>
+</div>
+</nav>
     </header>
 
     <!-- Floating Donate button — fixed, stays visible while scrolling -->
