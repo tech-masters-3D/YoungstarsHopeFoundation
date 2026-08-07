@@ -2601,3 +2601,27 @@ img { max-width: 100%; display: block; }
     .nav-link { color: var(--text, #2D221E) !important; width: 100%; padding: 0.65rem 0 !important; }
     .nav-link:hover, .nav-link.active { color: var(--terracotta, #D95D39) !important; }
 }
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 90px; /* adjust to your actual header height */
+  }
+
+  .hero-inner {
+    padding-top: 1rem;
+  }
+
+  .eyebrow-light {
+    display: block;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.15;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+}
