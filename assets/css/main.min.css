@@ -1342,30 +1342,27 @@ img { max-width: 100%; display: block; }
 .form-status-center { text-align: center; }
 
 /* ===== Newsletter band =====
-   Deliberately not var(--ink) flat — that's the footer's color,
-   and the two dark sections sit back-to-back on this page. This
-   uses the warm terracotta gradient instead (same family as
-   .cta-photo-scrim / .btn-primary-warm) so it reads as its own
-   section rather than bleeding into the footer below it. */
+   Plain default section styling — no custom background, no on-dark
+   text theme, no accent color overrides. Matches the site's normal
+   light sections (.about-brief, .form-panel, etc). */
 .newsletter-band {
     padding: 6.5rem 0; position: relative; overflow: hidden;
-    background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-deep) 60%, var(--ink) 130%);
 }
+.newsletter-band .eyebrow-light { color: var(--terracotta); }
+.newsletter-band .section-title.on-dark { color: var(--text); }
+.newsletter-band .accent-gold { color: var(--terracotta); font-style: italic; font-weight: 500; }
+.newsletter-band .hero-lead.newsletter-lead { color: var(--text-muted); }
+
 .newsletter-card {
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2.5rem;
-    background: rgba(250, 246, 240, 0.08); border: 1px solid rgba(250, 246, 240, 0.18);
-    border-radius: var(--radius-lg); padding: 3rem 3.2rem;
+    background: #fff; border: 1px solid rgba(217, 93, 57, 0.08);
+    border-radius: var(--radius-lg); padding: 3rem 3.2rem; box-shadow: var(--shadow-soft);
 }
 .newsletter-copy { flex: 1 1 380px; }
 .newsletter-lead { margin-top: 1rem; max-width: 460px; }
 .newsletter-form { flex: 1 1 340px; display: flex; flex-direction: column; gap: 0.9rem; max-width: 400px; }
-.newsletter-form .form-control {
-    background: rgba(250, 246, 240, 0.08); border-color: rgba(250, 246, 240, 0.2); color: var(--on-dark);
-}
-.newsletter-form .form-control::placeholder { color: var(--on-dark-muted); }
-.newsletter-form .form-control:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(242, 166, 94, 0.18); }
 .newsletter-fineprint {
-    text-align: center; color: var(--on-dark-muted); font-size: 0.78rem; margin-top: 1.4rem;
+    text-align: center; color: var(--text-muted); font-size: 0.78rem; margin-top: 1.4rem;
 }
 
 /* ===== Responsive ===== */
@@ -2602,26 +2599,51 @@ img { max-width: 100%; display: block; }
     .nav-link:hover, .nav-link.active { color: var(--terracotta, #D95D39) !important; }
 }
 @media (max-width: 576px) {
+  /* Stop relying on vertical centering to clear the fixed header —
+     centering only applies half of any padding-top, which left the
+     eyebrow text tucked under the logo. Switch to flex-start and push
+     content down by the header's real height instead. */
   .hero {
-    padding-top: 90px; /* adjust to your actual header height */
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 120px; /* clears logo + two-line brand text + header padding */
+    padding-bottom: 3rem;
+    box-sizing: border-box;
   }
 
   .hero-inner {
-    padding-top: 1rem;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0;
   }
 
   .eyebrow-light {
     display: block;
-    margin-top: 0.5rem;
     position: relative;
     z-index: 1;
   }
 
   .hero-title {
-    font-size: clamp(2rem, 9vw, 2.75rem);
-    line-height: 1.15;
+    font-size: clamp(1.9rem, 8.5vw, 2.5rem);
+    line-height: 1.2;
     word-break: break-word;
     overflow-wrap: break-word;
+    width: 100%;
     max-width: 100%;
+  }
+
+  .hero-lead {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  /* Extra-narrow phones (SE, small Android) need a touch more headroom
+     and a slightly smaller floor on the title. */
+  .hero {
+    padding-top: 130px;
+  }
+  .hero-title {
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
   }
 }
