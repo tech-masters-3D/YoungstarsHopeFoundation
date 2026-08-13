@@ -219,8 +219,10 @@
 
                     <div class="col-lg-7">
                         <div class="form-panel fade-up">
-                            <form id="volunteerForm" novalidate autocomplete="on">
-                                <!-- Replace with your own Web3Forms access key: https://web3forms.com -->
+                            <form id="volunteerForm" method="post" action="/submit-form" novalidate autocomplete="on">
+                                <!-- Server expects a `form_type` field so backend knows which form this is -->
+                                <input type="hidden" name="form_type" value="volunteer" />
+                                <!-- Optional: leave Web3Forms keys in place if you still use that service as fallback -->
                                 <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
                                 <input type="hidden" name="subject" value="New volunteer application — YoungStars Hope Foundation-Africa" />
                                 <input type="hidden" name="from_name" value="YoungStars Website" />
@@ -290,6 +292,7 @@
 
                                 <div id="volunteerStatus" class="form-status" role="status" aria-live="polite"></div>
                             </form>
+                            <!-- Volunteer form handler moved to assets/js/main.min.js -->
                         </div>
                     </div>
                 </div>
