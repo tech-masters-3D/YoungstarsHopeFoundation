@@ -1,0 +1,1 @@
+{"time":"2026-08-13T19:09:42.512Z","ip":"::1","route":"/submit-form","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.9168","errors":[{"type":"field","value":{"form_type":"subscribe"},"msg":"Validation failed","path":"","location":"body"}],"body":{"form_type":"subscribe","phone":null,"message_present":false}}
