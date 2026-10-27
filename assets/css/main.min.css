@@ -1522,7 +1522,7 @@ img { max-width: 100%; display: block; }
 .donate-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1473649085228-583485e6e4d7?auto=format&fit=crop&w=1920&q=80');
+    background-image: url('https://res.cloudinary.com/evct6n3j/image/upload/v1793007790/ART_7960_uf0ech.jpg');
     background-size: cover;
     background-position: center 30%;
     transform: scale(1.02);
