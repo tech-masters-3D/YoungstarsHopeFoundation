@@ -560,7 +560,8 @@ img { max-width: 100%; display: block; }
 
 /* ===== About page banner background (kept out of inline style for CSP) ===== */
 .banner-bg-about {
-    background-image: url('https://images.unsplash.com/photo-1548102249-acdce64fffbd?auto=format&fit=crop&w=1920&q=80');
+    background-image: url('https://res.cloudinary.com/evct6n3j/image/upload/f_auto,q_auto,w_1920/v1793008362/ART_8287_hplgd6.jpg');
+    opacity: 0.48;
 }
 
 /* ===== Feature chips (Who We Are) ===== */
@@ -596,8 +597,8 @@ img { max-width: 100%; display: block; }
 .mission-band { position: relative; padding: 7rem 0 5rem; overflow: hidden; background: var(--ink); }
 .mission-band-bg {
     position: absolute; inset: 0; background-size: cover; background-position: center 25%;
-    background-image: url('https://images.unsplash.com/photo-1632215861513-130b66fe97f4?auto=format&fit=crop&w=1920&q=80');
-    opacity: 0.28;
+    background-image: url('https://res.cloudinary.com/evct6n3j/image/upload/v1793007462/ART_7788_wpl81f.jpg');
+    opacity: 0.78;
 }
 .mission-band-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(45, 34, 30, 0.94) 0%, rgba(45, 34, 30, 0.88) 100%); }
 .mission-band-inner { position: relative; z-index: 2; }
@@ -626,8 +627,8 @@ img { max-width: 100%; display: block; }
 .initiatives-banner { position: relative; padding: 5.5rem 0; overflow: hidden; background: var(--ink); }
 .initiatives-banner-bg {
     position: absolute; inset: 0; background-size: cover; background-position: center;
-    background-image: url('https://images.unsplash.com/photo-1655720348590-c739c860beed?auto=format&fit=crop&w=1920&q=80');
-    opacity: 0.32;
+    background-image: url('https://res.cloudinary.com/evct6n3j/image/upload/v1793007094/ART_7693_iplblm.jpg');
+    opacity: 0.72;
 }
 .initiatives-banner-scrim { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(45, 34, 30, 0.95) 0%, rgba(45, 34, 30, 0.75) 100%); }
 .initiatives-banner-inner { position: relative; z-index: 2; max-width: 680px; }
@@ -650,8 +651,8 @@ img { max-width: 100%; display: block; }
 .cta-photo { position: relative; padding: 7rem 0; overflow: hidden; background: var(--ink); }
 .cta-photo-bg {
     position: absolute; inset: 0; background-size: cover; background-position: center 30%;
-    background-image: url('https://images.unsplash.com/photo-1534597422092-8a84f1b45a9c?auto=format&fit=crop&w=1920&q=80');
-    opacity: 0.35;
+    background-image: url('https://res.cloudinary.com/evct6n3j/image/upload/v1793006992/ART_7661_cv1zno.jpg');
+    opacity: 0.65;
 }
 .cta-photo-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(45, 34, 30, 0.9) 0%, rgba(217, 93, 57, 0.55) 100%); }
 .cta-photo-inner { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
